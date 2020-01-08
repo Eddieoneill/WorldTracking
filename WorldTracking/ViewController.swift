@@ -32,9 +32,19 @@ class ViewController: UIViewController {
 //        node.geometry = SCNCone(topRadius: 0.01, bottomRadius: 0.1, height: 0.3)
 //        node.geometry = SCNCapsule(capRadius: 0.1, height: 0.3)
 //        node.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.03)
+//        node.geometry = SCNTube(innerRadius: 0.2, outerRadius: 0.3, height: 0.5)
+//        node.geometry = SCNTorus(ringRadius: 0.03, pipeRadius: 0.01)
+//        node.geometry = SCNPlane(width: 0.1, height: 0.1)
+        node.geometry = SCNPyramid(width: 0.1, height: 0.3, length: 0.1)
+//        let path = UIBezierPath()
+//        path.move(to: CGPoint(x: 0, y: 0))
+//        path.addLine(to: CGPoint(x: 0, y: 0.2))
+//        path.addLine(to: CGPoint(x: 0.2, y: 0.3))
+//        let shape = SCNShape(path: path, extrusionDepth: 0.2)
+//        node.geometry = shape
         node.geometry?.firstMaterial?.specular.contents = UIColor.white
         node.geometry?.firstMaterial?.diffuse.contents = randomColor.randomElement()!
-        node.position = SCNVector3(randomNumber.randomElement()!, randomNumber.randomElement()!, randomNumber.randomElement()!)
+        node.position = SCNVector3(0, 0, -0.7)
         self.sceneView.scene.rootNode.addChildNode(node)
     }
     
