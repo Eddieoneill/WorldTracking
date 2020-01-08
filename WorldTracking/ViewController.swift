@@ -29,7 +29,9 @@ class ViewController: UIViewController {
     
     @IBAction func add(_ sender: Any) {
         let node = SCNNode()
-        node.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.03)
+//        node.geometry = SCNCone(topRadius: 0.01, bottomRadius: 0.1, height: 0.3)
+//        node.geometry = SCNCapsule(capRadius: 0.1, height: 0.3)
+//        node.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.03)
         node.geometry?.firstMaterial?.specular.contents = UIColor.white
         node.geometry?.firstMaterial?.diffuse.contents = randomColor.randomElement()!
         node.position = SCNVector3(randomNumber.randomElement()!, randomNumber.randomElement()!, randomNumber.randomElement()!)
